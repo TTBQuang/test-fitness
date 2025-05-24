@@ -5,7 +5,11 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'self' https://*.skycloak.io https://*.vercel.app;"
+          "value": "default-src 'self'; frame-ancestors 'self' https://*.skycloak.io https://*.vercel.app https://fcaaf0a4-fd3e-4274-8377-7a88e78f9086.app.skycloak.io; frame-src 'self' https://*.skycloak.io https://fcaaf0a4-fd3e-4274-8377-7a88e78f9086.app.skycloak.io; connect-src 'self' https://*.skycloak.io https://*.vercel.app;"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOW-FROM https://fcaaf0a4-fd3e-4274-8377-7a88e78f9086.app.skycloak.io"
         }
       ]
     }
